@@ -2,12 +2,12 @@ import streamlit as st
 import snscrape.modules.twitter as sntwitter
 import pandas as pd
 
-st.title('Scraping Twitter with Streamlit and Snscrape')
+st.title('Scraping Twitter')
 
 # Input query and number of tweets to scrape
 query = st.text_input('Enter a search query:', 'data science')
 num_tweets = st.number_input(
-    'Number of tweets to scrape:', min_value=1, max_value=1000, step=1)
+    'Number of tweets to scrape:', min_value=1, max_value=1000000, step=1)
 
 # Input since and until dates
 since_date = st.date_input("Since Date", value=None,
